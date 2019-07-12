@@ -27,3 +27,6 @@ hs_err_pid*
 local.properties
 jmh-practice.iml
 
+# gradle output
+build/
+
