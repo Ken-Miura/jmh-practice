@@ -30,3 +30,6 @@ jmh-practice.iml
 # gradle output
 build/
 
+# gradle cache
+.gradle/
+
