@@ -7,8 +7,8 @@ import org.junit.jupiter.params.provider.ValueSource;
 public class MyUtilTest {
 
     @ParameterizedTest
-    @ValueSource(ints = {-1, 0, 1, 3, 5, -3, 15, Integer.MIN_VALUE, Integer.MAX_VALUE})
-    public void testBitCount (int number) {
-        Assertions.assertEquals(Integer.bitCount(number), MyUtil.bitCount(number), "tested number: " + number);
+    @ValueSource(longs = {-1, 0, 1, 3, 5, -3, 15, Integer.MIN_VALUE, Integer.MAX_VALUE, Long.MIN_VALUE, Long.MAX_VALUE})
+    public void testBitCount (long number) {
+        Assertions.assertEquals(Long.bitCount(number), MyUtil.bitCount(number), "tested number: " + number);
     }
 }

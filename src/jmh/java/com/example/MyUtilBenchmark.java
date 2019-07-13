@@ -20,18 +20,18 @@ public class MyUtilBenchmark {
     public static class Holder {
         private static final long SEED = 1234L;
         private static final Random r = new Random(SEED);
-        public int value = 0;
+        public long value = 0;
 
         @Setup(Level.Trial)
         public void setUp () {
-            value = r.nextInt();
+            value = r.nextLong();
             System.out.print(String.format("(evaluated value: %d) ", value));
         }
     }
 
     @Benchmark
     public void benchmarkStdLibBitCount(Holder h) {
-        Integer.bitCount(h.value);
+        Long.bitCount(h.value);
     }
 
     @Benchmark
